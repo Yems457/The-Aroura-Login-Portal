@@ -169,3 +169,84 @@ border-radius: 50px;
   /* Increase shadow spread for "floating" effect */
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
 }
+
+.background {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(assets\content.jpg);
+
+}
+
+#card {
+  position: absolute;
+  height: 60%;
+  width: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.18)
+  background: rgba(89, 131,83, 0.09);
+  backdrop-filter: blur(2px);
+  border-radius: 1cm;
+  display: flex;
+  transition: transform 0.8s, backdrop-filter 0.5s;
+  z-index: 10;
+
+}
+
+#card:hover {
+  backdrop-filter: blur(14px);
+  height: 60%;
+  width: 40%;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+#logo {
+  height: 90%;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+
+} 
+
+.box {
+        position: absolute;
+        height: 200px;
+        width: 280px;
+        background-color: #f0baba;
+        z-index: auto;
+        text-align: center;
+        padding: 3px;
+        left: 10px;
+        top: 10px;
+    }
+
+        .box1 {
+        position: absolute;
+        height: 120px;
+        width: 200px;
+        background-color: #eae98f;
+        z-index: -1;
+        text-align: center;
+        padding: 5px;
+        margin: 20px;
+        left: 30px;
+        top: 30px;
+    }
+
+
+.mybox {
+  width: 50px;
+  height: 50px;
+  background-color: #349834;
+
+}
+body {
+  background-color: lightpink;
+}
+
+@media (min-width: 500px) and (max-width: 789px)
+body {
+  
+}
