@@ -1,0 +1,139 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Background image/gradient is necessary to see the glass effect */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: sans-serif;
+}
+
+.mesh-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ 
+
+  /* Creating the mesh effect using multiple radial gradients */
+    background-color: #0f0c29; /* Base color: Deep Purple */
+      background-image: 
+        radial-gradient(at 10% 10%, #302b63 0px, transparent 50%), /* Mid Purple */
+        radial-gradient(at 90% 10%, #24243e 0px, transparent 50%), /* Dark Blue */
+        radial-gradient(at 50% 50%, #1a2a6c 0px, transparent 50%), /* Deep Blue */
+        radial-gradient(at 10% 90%, #203a43 0px, transparent 50%), /* Dark Cyan */
+        radial-gradient(at 90% 90%, #000428 0px, transparent 50%); /* Base Blue */
+    background-size: cover;
+    background-position: center;
+    filter: blur(80px); /* Creates the soft, blended "mesh" look */
+    z-index: -1; /* Ensures it stays behind content */
+}
+
+.mesh-gradient {
+  /* Initial background color */
+  background-color: #0f0c29; 
+  
+  /* Applying the animation: name, duration, timing, iteration, direction */
+  animation: breatheColor 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes breatheColor {
+  0% {
+    background-color: #0f0c29; /* Start Color */
+  }
+  50% {
+    background-color: #3cc8b4; /* Mid Color (subtle change) */
+  }
+  100% {
+    background-color: #5885cb; /* Back to Start */
+  }
+}
+
+.glass-card h3 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 1rem;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.glass-card h4 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 1rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  justify-content: center;
+  color: violet;
+
+}
+
+.glass-card h2 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  border-radius: 10px;
+  
+}
+
+.input-group {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 2rem;
+  color: #203a43;
+}
+
+* {
+  /* Increases space between lines for better vertical readability */
+  line-height: 1cm;
+
+  /* Slightly spreads out letters to make them distinct */
+  letter-spacing: 0.1em;
+
+}
+
+ 
+.circle {
+  position: absolute;
+  z-index: -1; /* Pushes circles behind the card */
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: 20px;
+  left: 20px;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -30px;
+  opacity: 0.6;
+}
+
+.card:hover {
+  backdrop-filter: blur(14px);
+  height: 60%;
+  width: 40%;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+
+.container {
+
+  position: relative;
+  z-index: 0; /* Creates the stacking context */
+  background: #f0f0f0; /* The main page background */
+  display: grid;
+  place-items: center; /* Centers horizontally and vertically */
+  height: 30vh;      /* Makes container the full height of the viewport */
+
+}
+  
